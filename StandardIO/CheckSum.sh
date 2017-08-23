@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Welcome to use CheckSum, Pass me the file path, and I'll help you figure out the MD5 value."
+echo "Please provide the original file, and I'll calculate the MD5 value."
 
 function calc {
     read path
