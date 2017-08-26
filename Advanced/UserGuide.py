@@ -15,18 +15,18 @@ def familiar_with_software_interface():
         "The only difference is that your communication object is a script file "
         "rather than a real person."
         )
-    writeFileRef("images/main_interface.png")
+    writeFileRef("../images/main_interface.png")
     writePlain(
         "The blue rectangle part on the left show the already loaded script. "
         "Each script provides different functions, and you can interact with it "
         "through the chat window on the right.\r\n"
         "If you already have a script, you can click button on the green rectangle to load it."
         )
-    writeFileRef("images/create_conversation_window.png")
+    writeFileRef("../images/create_conversation_window.png")
     writePlain("This is the window used to load a new script.")
     writePlain("Finally, click the dolphin icon in the upper right corner of the screen and open the Preferences window.")
-    writeFileRef("images/state_item.png")
-    writeFileRef("images/perferences_window.png")
+    writeFileRef("../images/state_item.png")
+    writeFileRef("../images/perferences_window.png")
     writePlain("This is preferences window and you can fill in your basic profile here.")
     
 def download_and_run_script():
@@ -38,13 +38,13 @@ def download_and_run_script():
         "I downloaded a script for calculating the file MD5 value. "
         "Now I need to load it into Echonify."
         )
-    writeFileRef("images/load_first_script.png")
+    writeFileRef("../images/load_first_script.png")
     writePlain(
         "The software automatically generates display name and icon for me. "
         "Of course you can also customize it."
         )
     writePlain("The script has been loaded successfully, let's try it.")
-    writeFileRef("images/first_message.png")
+    writeFileRef("../images/first_message.png")
 
 def write_your_own_script():
     writePlain("Writing an Echonify script may be simpler than you might think.")
@@ -69,7 +69,7 @@ def security_directory():
         "In order to prevent malicious scripts from harming the system, all files accessed in "
         "the script must be included in the Security Path."
     )
-    writeFileRef("images/security_path.png")
+    writeFileRef("../images/security_path.png")
 
 if __name__ == '__main__':
     writePlain(
