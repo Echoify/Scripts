@@ -1,5 +1,5 @@
 # Scripts
-Collection of useful Echonify Scripts
+Collection of useful Echoify Scripts
 
 ![Preview 1](images/screenshot1.png)  
 
