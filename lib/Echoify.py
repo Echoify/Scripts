@@ -1,18 +1,18 @@
 import sys, os, httplib, json, uuid
 
-mode = os.environ["Echonify-InteractiveMode"]
+mode = os.environ["Echoify-InteractiveMode"]
 if mode <> "Advanced":
     raise Exception("Please run the script in Advanced mode!")
 
-localPort = os.environ["Echonify-LocalPort"]
-securityToken = os.environ["Echonify-SecurityToken"]
+localPort = os.environ["Echoify-LocalPort"]
+securityToken = os.environ["Echoify-SecurityToken"]
 
 def read():
     try:
         conn = httplib.HTTPConnection("127.0.0.1", localPort)
         headers = {
-            "Echonify-SecurityToken": securityToken,
-            "Echonify-FlowDirection": "inbound"
+            "Echoify-SecurityToken": securityToken,
+            "Echoify-FlowDirection": "inbound"
         }
         conn.request("GET", "/", headers=headers)
         response = conn.getresponse()
@@ -44,8 +44,8 @@ def write(obj):
         conn = httplib.HTTPConnection("127.0.0.1", localPort)
         headers = {
             "Content-Type": "application/json",
-            "Echonify-SecurityToken": securityToken,
-            "Echonify-FlowDirection": "outbound"
+            "Echoify-SecurityToken": securityToken,
+            "Echoify-FlowDirection": "outbound"
         }
         data = json.dumps(obj)
         conn.request("POST", "/", data, headers=headers)
@@ -79,9 +79,9 @@ def writeStream(fileName, streamId):
         conn.putrequest("POST", "/")
         conn.putheader("Transfer-Encoding", "chunked")
         conn.putheader("Content-Type", "application/octet-stream")
-        conn.putheader("Echonify-SecurityToken", securityToken)
-        conn.putheader("Echonify-FlowDirection", "outbound")
-        conn.putheader("Echonify-StreamId", streamId)
+        conn.putheader("Echoify-SecurityToken", securityToken)
+        conn.putheader("Echoify-FlowDirection", "outbound")
+        conn.putheader("Echoify-StreamId", streamId)
         conn.endheaders()
         with open(fileName, 'rb') as f:
             while True:

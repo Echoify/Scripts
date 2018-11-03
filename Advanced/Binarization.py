@@ -3,13 +3,13 @@
 import sys, os
 sys.path.append("../lib")
 
-import Echonify
+import Echoify
 from PIL import Image
 
-Echonify.writePlain("Please provide the original picture.")
+Echoify.writePlain("Please provide the original picture.")
 
 while True:
-    fileName = Echonify.readFileRef()
+    fileName = Echoify.readFileRef()
     if fileName is not None:
         col = Image.open(fileName)
         gray = col.convert('L')
@@ -17,5 +17,5 @@ while True:
         path, ext = os.path.splitext(fileName)
         newPath = "%s.bin%s" % (path, ext)
         bw.save(newPath)
-        Echonify.writeFileRef(newPath)
+        Echoify.writeFileRef(newPath)
         

@@ -1,16 +1,16 @@
 # This is a developer oriented guide for teaching you
-# how to use Echonify to develop productivity tools.
+# how to use Echoify to develop productivity tools.
 
-# More development resources https://github.com/Echonify
+# More development resources https://github.com/Echoify
 
 import sys
 sys.path.append("../lib")
 
-from Echonify import writePlain, writeFileRef, readPlain
+from Echoify import writePlain, writeFileRef, writeFile, readPlain
 
 def familiar_with_software_interface():
     writePlain(
-        "We assume that you have opened Echonify.\r\n"
+        "We assume that you have opened Echoify.\r\n"
         "You see the interface similar to the general chat software. "
         "The only difference is that your communication object is a script file "
         "rather than a real person."
@@ -32,11 +32,11 @@ def familiar_with_software_interface():
 def download_and_run_script():
     writePlain(
         "For ease of use, we have prepared some scripts for evaluation. "
-        "You can visit https://github.com/Echonify/Scripts to download."
+        "You can visit https://github.com/Echoify/Scripts to download."
         )
     writePlain(
         "I downloaded a script for calculating the file MD5 value. "
-        "Now I need to load it into Echonify."
+        "Now I need to load it into Echoify."
         )
     writeFileRef("../images/load_first_script.png")
     writePlain(
@@ -47,7 +47,7 @@ def download_and_run_script():
     writeFileRef("../images/first_message.png")
 
 def write_your_own_script():
-    writePlain("Writing an Echonify script may be simpler than you might think.")
+    writePlain("Writing an Echoify script may be simpler than you might think.")
     writePlain(
         "Whatever the scripting language you use, you only need to know is the standard "
         "input and output stream. The script receives the user input "
@@ -60,7 +60,7 @@ def write_your_own_script():
         )
     writePlain("Such as this:")
     writePlain(
-        "*print \"Hello Echonify!\"*\r\n"
+        "*print \"Hello Echoify!\"*\r\n"
         "*sys.stdout.flush()*\r\n"
         , "markdown")
 
@@ -73,7 +73,7 @@ def security_directory():
 
 if __name__ == '__main__':
     writePlain(
-        "Welcome! We are excited you want to learn how to use Echonify.\r\n"
+        "Welcome! We are excited you want to learn how to use Echoify.\r\n"
         "In this four-part tutorial, you will:\r\n\r\n"
         "1. Familiar with software interface.\r\n"
         "2. Download and run script.\r\n"
@@ -82,7 +82,7 @@ if __name__ == '__main__':
         )
     writePlain(
                "The software itself is very simple so that beginners can quickly get started. "
-               "the value of Echonify is in how it can ship and run scripts; "
+               "the value of Echoify is in how it can ship and run scripts; "
                "it's totally agnostic as to what your script actually does."
                )
     writePlain("Now pick a topic you are interested in (Type topic number):")
